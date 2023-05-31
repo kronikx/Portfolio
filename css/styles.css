@@ -25,11 +25,11 @@ section#hero {
 }
 
 section#hero h1 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 section#hero #typing-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
     overflow: hidden;
     white-space: nowrap;
@@ -38,7 +38,7 @@ section#hero #typing-text {
 
 section#hero ul {
     display: flex;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     gap: 2rem;
 }
 
