@@ -1,45 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-:root {
-    --accent-1: #ec53be;
-    --accent-1-lighter: #ec53be31;
-    --accent-2: #f897db;
-}
-
-body {
-    font-family: "lato";
-    background-color: black;
-    height: 100%;
-
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-#bg {
-    position: absolute;
-    top: 0;
+header {
+    position: relative;
     left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
+    top: 0;
+    width: 1005;
+    height: 80px;
 }
 
-h1, h2, h4, p {
+header h4 {
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+/* Splash Screen */
+.intro {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+
+.logo-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
 }
 
-h1:hover, h2:hover, h4:hover, p:hover {
-    color: var(--accent-2);
+.logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
 }
 
-body p.para {
-    max-width: 50%;
-    margin: 0 auto;
+.logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
 }
