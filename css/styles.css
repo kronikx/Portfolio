@@ -21,7 +21,36 @@ section#hero {
     justify-content: center;
     text-align: center;
     color: white;
+    background: transparent;
 }
+
+section#hero #typing-text {
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(40, end);
+}
+
+.blink {
+    animation: blink-animation 1s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-animation {
+    50% {
+        opacity: 0;
+    }
+}
+
 
 /* Particles */
 #bg {
